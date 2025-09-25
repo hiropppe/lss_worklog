@@ -1,0 +1,14 @@
+services:
+    back:
+        build:
+            context: .
+        image: lss_worklog
+        container_name: lss_worklog
+        network_mode: host
+        tty: true
+        volumes:
+            # Mount the root folder that contains .git
+            - .:/workspaces/lss
+            - .jupyter:/root/.jupyter
+        #command: ["bash"]
+
