@@ -1,11 +1,11 @@
 services:
-    back:
+    text-scaling:
         build:
             context: .
-        image: lss_worklog
-        container_name: lss_worklog
+        image: text-scaling
+        container_name: text-scaling
         network_mode: host
-        tty: true
+        #tty: true
         volumes:
             # Mount the root folder that contains .git
             - .:/workspaces/lss
